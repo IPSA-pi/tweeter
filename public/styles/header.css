@@ -1,0 +1,13 @@
+header {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsl(41, 80%, 52%);
+  background-color: #25008a;
+  background-color: #ab8000;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
