@@ -21,6 +21,10 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
+main {
+  width: 90%;
+  margin: auto;
+}
 
 
 
