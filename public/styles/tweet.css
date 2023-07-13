@@ -1,5 +1,5 @@
 
-div.tweet-cont {
+article.tweet-cont {
   border-radius: 12px;
   margin: 1em 0;
   background-color: #ccd;
@@ -16,41 +16,42 @@ header.tweet-header{
   display: flex;
   justify-content: space-between;
 }
+
 header.tweet-header span.user-info {
   display: flex;
   gap: 1em;
 }
 
-div.tweet-cont img {
+article.tweet-cont img {
   border-radius: 100%;
   width:2em;
 }
 
-div.tweet-cont article p {
+article.tweet-cont p.tweet {
   font-weight: 600;
   padding-bottom: .5em;
   border-bottom: solid .125em black;
   margin-bottom: 0;
 }
 
-div.tweet-cont footer {
+article.tweet-cont footer {
   display: flex;
   justify-content: space-between;
   font-size: medium;
   align-items: center;
 }
 
-div.tweet-cont footer p {
+article.tweet-cont footer p {
   font-weight: 600;
 }
 
-div.tweet-cont span.icons {
+span.icons {
   color: #25008a;
 }
 
 /* HOVER effect */
 
-div.tweet-cont:hover {
+article.tweet-cont:hover {
   box-shadow: 5px 5px #ccc;
 }
 
