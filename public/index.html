@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
     
     <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/header.css">
@@ -39,16 +40,16 @@
       </div>
     </nav>
     
-    <header>
-      <div>
+    <header class="main-header">
+      <div class="user-profile-pic">
           <img src="/images/profile-hex.png"> 
       </div>
-      <div>
+      <div class="user-name">
           <h2>Your Name</h2>
       </div>
     </header>
 
-    <main class="container">
+    <main>
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets/" method="POST">
@@ -65,8 +66,31 @@
           </div>
         </form>
       </section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore deleniti necessitatibus libero, perspiciatis qui fugiat, hic eius deserunt sit aspernatur eaque. Pariatur, minima iure consectetur reiciendis rerum ut recusandae a.
+
+      <div class="tweet-cont">
+        <header class="tweet-header">
+          <span class="user-info">
+            <img src="./images/bresson.jpg" alt="Robert Bresson portrait">
+            <p>Robert Bresson</p>
+          </span>
+          <span class="handle">
+            <p>@pickPocket</p>
+          </span>
+        </header>
+
+        <article>
+          <p class="tweet">Make visible what, without you, might perhaps never have been seen.</p>
+        </article>
+        
+        <footer>
+          <p class="when">10 days ago</p>
+          <span class="icons">
+            <span class="fa-solid fa-flag"></span>
+            <span class="fa-solid fa-retweet"></span>
+            <span class="fa-solid fa-heart"></span>
+          </span>
+        </footer>
+      </div>
     </main>
   </body>
 </html>
