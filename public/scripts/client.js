@@ -5,7 +5,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// import { format, render, cancel, register } from 'timeago.js';
+// const format = require('timeago');
+
 const createTweetElement = function (tweetObj) {
+  // console.log(format(tweetObj.created_at));
   const tweetTemplate = $('<article>');
   tweetTemplate.prepend(`
   <article class="tweet-cont">
@@ -20,7 +24,7 @@ const createTweetElement = function (tweetObj) {
       </header>  
       <p class="tweet">${tweetObj.content.text}</p>  
       <footer>
-        <p class="when">${tweetObj.created_at}</p>
+        <p class="when">${timeago.format(tweetObj.created_at)}</p>
         <span class="icons">
           <span class="fa-solid fa-flag"></span>
           <span class="fa-solid fa-retweet"></span>
