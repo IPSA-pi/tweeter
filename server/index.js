@@ -1,5 +1,6 @@
 "use strict";
-
+const morgan = require('morgan');
+morgan('tiny');
 // Basic express setup:
 
 const PORT          = 8080;

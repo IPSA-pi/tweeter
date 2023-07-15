@@ -4,30 +4,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const tweets = [
-  {
-    user: {
-      name: 'Robert Bresson',
-      avatars: 'https://i.imgur.com/73hZDYK.png',
-      handle: '@pickPocket',
-    },
-    content: {
-      text: 'Make visible what, without you, might perhaps never have been seen.',
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: 'Descartes',
-      avatars: 'https://i.imgur.com/nlhLi3I.png',
-      handle: '@rd',
-    },
-    content: {
-      text: 'Je pense , donc je suis',
-    },
-    created_at: 1461113959088,
-  },
-];
 
 const createTweetElement = function (tweetObj) {
   const tweetTemplate = $('<article>');
@@ -62,6 +38,23 @@ const renderTweets = function (tweetsArray) {
   return $('.tweet-cont').append(tweetsHtml);
 };
 
+const loadTweets = () => {
+  $.ajax({
+    url: '/tweets',
+    type: 'GET',
+    dataType: 'json',
+    success: (result) => {
+      console.log(result);
+      renderTweets(result);
+    },
+    error: (error) => {
+      console.error('An error occured, ', error);
+    },
+  });
+};
+
+// loadTweets();
+
 const postTweet = () => {
   const data = $('.tweetForm').serialize();
   console.log(data);
@@ -69,9 +62,6 @@ const postTweet = () => {
     type: 'POST',
     url: '/tweets',
     data,
-    // success: () => { renderTweets(data); },
-    // dataType: 'text',
-    // error: (error) => { console.error('An error occured', error); },
   }).then((result) => {
     console.log(result);
   }).catch((error) => {
@@ -80,7 +70,7 @@ const postTweet = () => {
 };
 
 $(document).ready(function () {
-  renderTweets(tweets);
+  renderTweets(loadTweets());
   $('.tweetBtn').on('submit', (event) => {
     console.log(event);
     event.preventDefault();
