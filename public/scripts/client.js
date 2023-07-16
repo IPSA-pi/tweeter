@@ -6,9 +6,14 @@
  */
 
 const createTweetElement = function (tweetObj) {
-  // console.log(format(tweetObj.created_at));
-  /// const tweetTemplate = $('<article>');
-  // tweetTemplate.append(`
+  const escape = function (str) {
+    const tweetTag = document.createElement('p');
+    tweetTag.appendChild(document.createTextNode(str));
+    return tweetTag.innerHTML;
+  };
+
+  const safeInput = escape(tweetObj.content.text);
+
   const article = `<article class="tweet-cont">
         <header class="tweet-header">
           <span class="user-info">
@@ -19,7 +24,7 @@ const createTweetElement = function (tweetObj) {
             <p>${tweetObj.user.handle}</p>
           </span>
         </header>  
-        <p class="tweet">${tweetObj.content.text}</p>  
+        <p class="tweet">${safeInput}</p>  
         <footer>
           <p class="when">${timeago.format(tweetObj.created_at)}</p>
           <span class="icons">
