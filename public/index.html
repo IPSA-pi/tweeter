@@ -53,9 +53,11 @@
 
     <main>
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
+        <div class="error length">
+          <p>⚠ Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye. ⚠</p>
+        </div>
+        
         <form action="/tweets" method="POST" class="tweetForm">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea 
             name="text" 
             id="tweet-text" 

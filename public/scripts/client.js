@@ -66,6 +66,8 @@ $(document).ready(function () {
   loadTweets();
   $('.tweetForm').submit((event) => {
     event.preventDefault();
+    $('.error').css({ visibility: 'hidden', position: 'absolute' });
+
     const data = $('.tweetForm').serialize();
 
     if (data === 'text=' || data === 'null') {
@@ -74,7 +76,8 @@ $(document).ready(function () {
     }
 
     if (data.length > 145) {
-      alert("you're tweet is to long");
+      // alert("you're tweet is to long");
+      $('.error').css({ visibility: 'visible', position: 'relative' });
       return false;
     }
 
