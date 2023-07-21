@@ -1,0 +1,35 @@
+@use '../abstracts';
+
+ html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+* Global layout stuff
+*/
+
+body {
+  color: abstracts.$dFontColor;
+  background-color: floralwhite;
+  /* background-color: #f4f1ec; */
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .mainBlock-1{
+    width: 30%;
+  }
+  .mainBlock-2{
+    width: 65%;
+  }
+}

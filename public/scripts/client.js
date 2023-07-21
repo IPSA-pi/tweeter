@@ -17,12 +17,10 @@ const createTweetElement = function (tweetObj) {
   const article = `<article class="tweet-cont">
         <header class="tweet-header">
           <span class="user-info">
-            <img src="https://i.imgur.com/73hZDYK.png" alt="Robert Bresson portrait">
+            <img src=${tweetObj.user.avatars} alt="Robert Bresson portrait">
             <p>${tweetObj.user.name}</p>
           </span>
-          <span class="handle">
-            <p>${tweetObj.user.handle}</p>
-          </span>
+          <p class="handle">${tweetObj.user.handle}</p>
         </header>  
         <p class="tweet">${safeInput}</p>  
         <footer>
@@ -64,32 +62,31 @@ const loadTweets = () => {
 
 $(document).ready(function () {
   loadTweets();
-  $('.tweetForm').submit((event) => {
+  $('#tweetForm').submit((event) => {
     event.preventDefault();
     $('.error').css({ visibility: 'hidden', position: 'absolute' });
 
-    const data = $('.tweetForm').serialize();
+    const data = $('#tweetForm').serialize();
 
-    if (data === 'text=' || data === 'null') {
-      alert('please provide input');
+    if (data === 'text=' || data === 'null' || data === /^[^%]*(%20[^%]*)*$/) {
+      $('.errorNothing').css({ visibility: 'visible', position: 'relative' });
+      // alert('please provide input');
       return false;
     }
 
     if (data.length > 145) {
       // alert("you're tweet is to long");
-      $('.error').css({ visibility: 'visible', position: 'relative' });
+      $('.errorLength').css({ visibility: 'visible', position: 'relative' });
       return false;
     }
 
-    console.log('data: ', data);
-    // 1. Place holder to make all the validations
-    // For e.g. validate for the null / empty or you want to check for 140 characters
     $.ajax({
       url: '/tweets',
       type: 'POST',
       data,
       success: (result) => {
         loadTweets();
+        document.getElementById('tweetForm').reset();
       },
       error(err) {
         console.log('There was an error', err);

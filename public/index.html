@@ -13,11 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
     
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/tweet.css">
+    <!-- <link rel="stylesheet" href="/styles/tweet.css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/new-tweet.css">
+    <link rel="stylesheet" href="/styles/new-tweet.css"> -->
+
+    <!-- App SASS -->
+    <link rel="stylesheet" href="styles/sassStyles/main.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,44 +41,51 @@
       <span id="tweeter">tweeter</span>
       <div class="writeNewCont">
         <span id="writeTweet"><strong>Write</strong> a new tweet</span>
-        <span class="fa-solid fa-angles-down"></span>
+        <span class="fa-solid fa-angles-down arrows"></span>
       </div>
-    </nav>
-    
-    <header class="main-header">
-      <div class="user-profile-pic">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div class="user-name">
-          <h2>Your Name</h2>
-      </div>
-    </header>
+    </nav>   
+    <span class="spacer"> </span>
 
-    <main>
-      <section class="new-tweet">
-        <div class="error length">
-          <p>⚠ Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye. ⚠</p>
-        </div>
-        
-        <form action="/tweets" method="POST" class="tweetForm">
-          <textarea 
-            name="text" 
-            id="tweet-text" 
-            placeholder="What are you humming about?"
-            rows="1"
-          ></textarea>
-          <div id="form-footer">
-            <button type="submit" id="tweetBtn">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+    <main> 
+
+      <div class="mainBlock-1">
+        <header class="main-header">
+          <img src="/images/profile-hex.png" alt="profile pic"> 
+          <h2>Your_Name-64_uwu</h2>
+        </header>
+      </div>
+
+      <div class="mainBlock-2">
+        <section class="new-tweet">
+          <div class="error errorLength">
+            <p>⚠ Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye. ⚠</p>
           </div>
-        </form>
-      </section>
+          
+          <div class="error errorNothing">
+            <p>💩 U ain't humming anything. Try using your fingers to type smthng : V 💩</p>
+          </div>
 
-      <div class="tweets-container">
-        <!-- //1. This your actual container which contains all the tweets
-        //2. Every tweet is contained as <article class="tweet-cont"></article> -->
+          <form action="/tweets" method="POST" id="tweetForm">
+            <textarea 
+              name="text" 
+              id="tweet-text" 
+              placeholder="What are you humming about?"
+              rows="1"
+            ></textarea>
+            <div id="form-footer">
+              <button type="submit" id="tweetBtn">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section> 
         
+        <div class="tweets-container">        
+        </div>
       </div>
+
+
     </main>
   </body>
 </html>
+
+

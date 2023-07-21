@@ -1,0 +1,201 @@
+nav {
+  padding: 1.5em;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4056a1;
+  color: #ffffff;
+  height: 120px;
+  width: 100%;
+}
+
+span#tweeter {
+  font-family: "Bungee", sans-serif;
+  font-size: 2rem;
+}
+
+.writeNewCont {
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: flex-end;
+}
+.writeNewCont .arrows {
+  color: tomato;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+* Global layout stuff
+*/
+body {
+  color: #000;
+  background-color: floralwhite;
+  /* background-color: #f4f1ec; */
+  font-family: "Source Sans 3", sans-serif;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .mainBlock-1 {
+  width: 30%;
+}
+main .mainBlock-2 {
+  width: 65%;
+}
+
+span.spacer {
+  display: block;
+  height: 150px;
+}
+
+.main-header {
+  width: 100%;
+  height: 400px;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e90;
+}
+.main-header img {
+  height: 50%;
+}
+
+.error {
+  position: absolute;
+  visibility: hidden;
+  border: 5px solid red;
+  margin-bottom: 1em;
+  z-index: -1;
+}
+
+.errorLength p {
+  padding: 0.5em 1.5em;
+  margin: 0;
+  color: #A00;
+}
+
+.errorNothing p {
+  padding: 0.5em 1.5em;
+  margin: 0;
+  color: #A00;
+}
+
+.new-tweet {
+  width: 100%;
+  background-color: inherit;
+}
+
+textarea#tweet-text::placeholder {
+  color: #222;
+}
+
+textarea#tweet-text {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  border: none;
+  border-bottom: solid 0.125em #222;
+}
+
+form > * {
+  padding: 0.5em 0;
+}
+
+div#form-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee";
+}
+
+button#tweetBtn {
+  background-color: #25008a;
+  color: white;
+  border: none;
+  padding: 0.2em;
+}
+
+article.tweet-cont {
+  width: 100%;
+  margin: 1em 0;
+  background-color: inherit;
+  border: solid 2px black;
+  padding: 1em;
+}
+article.tweet-cont header.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+article.tweet-cont header.tweet-header .user-info {
+  display: flex;
+  gap: 1em;
+}
+article.tweet-cont header.tweet-header .user-info img {
+  width: 2em;
+  height: 2em;
+}
+article.tweet-cont header.tweet-header .user-info p {
+  font-weight: 600;
+}
+article.tweet-cont header.tweet-header p.handle {
+  font-weight: 600;
+  color: #999;
+}
+article.tweet-cont p.tweet {
+  font-weight: 400;
+  padding-bottom: 0.5em;
+  border-bottom: solid 0.125em black;
+  margin-bottom: 0;
+  word-break: break-all;
+  white-space: normal;
+}
+
+article.tweet-cont footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+  align-items: center;
+}
+
+article.tweet-cont footer p {
+  font-weight: 400;
+}
+
+span.icons {
+  color: #25008a;
+}
+
+/* HOVER effect */
+article.tweet-cont:hover {
+  box-shadow: 5px 5px #ccc;
+}
+
+footer span.icons .fa-solid:hover {
+  color: gold;
+}
+
+/*# sourceMappingURL=main.css.map */

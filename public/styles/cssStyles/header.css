@@ -1,13 +1,17 @@
-header.main-header {
+span.spacer {
+  display: block;
+  height: 100px;
+}
+
+.main-header {
+  width: 25%;
+  height: 25%;
   background-color: #ab8000;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-  height: 50vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 div.user-profile-pic img {
