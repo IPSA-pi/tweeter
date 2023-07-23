@@ -21,3 +21,13 @@ This repository can be used as starter code for understanding the basics of HTML
 - md5
 - chance
 - timeago.js
+
+## Screenshots
+
+Desktop layout: 
+
+!['responsive interface'](https://github.com/IPSA-pi/tweeter/blob/master/docs/responsive.png?raw=true)
+
+Handle user input to avoid XSS attacks: 
+
+!['XSS attack proof'](https://github.com/IPSA-pi/tweeter/blob/master/docs/xss.png?raw=true)
