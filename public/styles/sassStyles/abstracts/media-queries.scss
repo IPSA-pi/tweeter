@@ -1,3 +1,38 @@
 @media (max-width: 1250px) {
+  body {
+    nav {
+      background-color: transparent;
+      padding: 1.5em 3em;
+      position: absolute;
+    }
   
+    span.spacer {
+      height: 0;
+    }
+    
+    main {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+  
+      .mainBlock-1 {
+        width: 100%;  
+      }
+
+      .mainBlock-2 {
+        padding-top: 2rem;
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media print {
+  * {
+    background-color: white;
+  }
+  body nav, .mainBlock-1, .mainBlock-2>section.new-tweet, span.icons {
+    display: none;
+  }
 }

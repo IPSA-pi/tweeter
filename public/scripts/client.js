@@ -38,9 +38,8 @@ const createTweetElement = function (tweetObj) {
 
 const renderTweets = function (tweetsArray) {
   // const tweetsHtml = [];
-  $('.tweet-container').empty();
+  $('.tweets-container').empty();
   tweetsArray.forEach((t) => {
-    // tweetsHtml.unshift(createTweetElement(t));
     const result = createTweetElement(t);
     $('.tweets-container').prepend(result);
   });
@@ -68,7 +67,7 @@ $(document).ready(function () {
 
     const data = $('#tweetForm').serialize();
 
-    if (data === 'text=' || data === 'null' || data === /^[^%]*(%20[^%]*)*$/) {
+    if (data === 'text=' || data === 'null') {
       $('.errorNothing').css({ visibility: 'visible', position: 'relative' });
       // alert('please provide input');
       return false;
