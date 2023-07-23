@@ -20,6 +20,9 @@
     width: 90%;
     margin: auto;
   }
+  body main .mainBlock-2 p.tweet {
+    font-weight: 600;
+  }
 }
 @media print {
   * {
@@ -198,6 +201,7 @@ article.tweet-cont header.tweet-header p.handle {
 }
 article.tweet-cont p.tweet {
   font-weight: 400;
+  font-size: 1.5rem;
   padding-bottom: 0.5em;
   border-bottom: solid 0.125em black;
   margin-bottom: 0;
